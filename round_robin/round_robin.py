@@ -8,6 +8,9 @@ class Round_Robin():
         self.fila_processos = fila_processos
         self.quantum_segundos = quantum_segundos
 
+        with open("log.txt", "w") as arquivo:
+            arquivo.write("")
+
     def executar(self):
 
         while(len(self.fila_processos) > 0):
@@ -20,11 +23,13 @@ class Round_Robin():
 
             time.sleep(self.quantum_segundos)
 
-            os.kill(processo_atual.pid, signal.SIGSTOP)
             if(processo_atual.is_alive()):
+                os.kill(processo_atual.pid, signal.SIGSTOP)
                 self.fila_processos.append(processo_atual)
 
         print("fim do round robin")
+        with open("log.txt", "a") as arquivo:
+            arquivo.write("fim do round robin\n")
 
     def get_fila_processos(self):
         return self.fila_processos

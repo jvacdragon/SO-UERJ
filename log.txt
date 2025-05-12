@@ -1,0 +1,7 @@
+Iniciando processo que tem tempo de 4 segundos e pid de: 6223
+Inicio da função, com pid = 6239, que vai ter um looping que soma de 1 em 1 no tempo definido: 1 segundos
+Termino do processo com pid de 6239 e valor final sendo: 3960461
+Inicio da funcao de fibonacci por segundo com pid = 6250
+Fim da funcao de fibonacci com pid = 6250, valor final: 1
+Finalizando processo: 6223
+fim do round robin

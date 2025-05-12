@@ -1,7 +1,4 @@
 import process
-import time
-import signal
-import os
 import round_robin
 from multiprocessing import Process
 
@@ -12,8 +9,8 @@ if __name__ == "__main__":
     
 
     p1 = Process(target=processo.func1)
-    p2 = Process(target=processo.func2, args=(4,))
-    p3 = Process(target=processo.func3, args=(6,))
+    p2 = Process(target=processo.func2, args=(1,))
+    p3 = Process(target=processo.func3, args=(1,))
 
     fila.append(p1)
     fila.append(p2)
